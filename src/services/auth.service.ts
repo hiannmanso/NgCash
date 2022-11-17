@@ -18,6 +18,7 @@ export async function signUp(username: string, password: string) {
 
 export async function signIn(username: string, password: string) {
 	const isValidAccount = await authRepository.getByUsername(username)
+
 	if (!isValidAccount) {
 		throw {
 			status: 401,
@@ -30,6 +31,6 @@ export async function signIn(username: string, password: string) {
 			message: `Incorrect password or email.`,
 		}
 	}
-	const token = generateToken(isValidAccount.id)
+	const token = generateToken(isValidAccount.accountId)
 	return token
 }

@@ -12,7 +12,7 @@ model accounts {
   balance                                               Int            @default(100)
   transactions_accountsTotransactions_debitedAccountId  transactions[] @relation("accountsTotransactions_debitedAccountId")
   transactions_accountsTotransactions_creditedAccountId transactions[] @relation("accountsTotransactions_creditedAccountId")
-  users                                                 users[]
+  users                                                 users?
 }
 
 model transactions {
@@ -20,7 +20,7 @@ model transactions {
   debitedAccountId                                  Int
   creditedAccountId                                 Int
   value                                             Int
-  createdAt                                         DateTime @default(now()) @db.Timestamp(6)
+  createdAt                                         DateTime @default(now())
   accounts_accountsTotransactions_debitedAccountId  accounts @relation("accountsTotransactions_debitedAccountId", fields: [debitedAccountId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "transactions_fk0")
   accounts_accountsTotransactions_creditedAccountId accounts @relation("accountsTotransactions_creditedAccountId", fields: [creditedAccountId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "transactions_fk1")
 }
@@ -29,6 +29,6 @@ model users {
   id        Int      @id(map: "users_pk") @default(autoincrement())
   username  String   @unique
   password  String
-  accountId Int
+  accountId Int      @unique
   accounts  accounts @relation(fields: [accountId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "users_fk0")
 }

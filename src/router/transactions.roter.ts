@@ -1,7 +1,7 @@
 import { Router } from 'express'
-import { transactionsBalanceGET } from '../controllers/transactions.controller'
+import { myTransactionsGET } from '../controllers/transactions.controller.js'
 
 const transactionsRouter = Router()
-transactionsRouter.get('/balance', transactionsBalanceGET)
+transactionsRouter.get('/transactions', myTransactionsGET)
 
 export default transactionsRouter

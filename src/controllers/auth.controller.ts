@@ -14,5 +14,5 @@ export async function signinGET(req: Request, res: Response) {
 	const { username, password }: user = req.body
 	const token = await signIn(username, password)
 
-	res.status(200).send(`Token:{${token}}`)
+	res.status(200).send({ token })
 }
