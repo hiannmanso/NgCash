@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express'
 
-export function handdleError(
+export function handleError(
 	error,
 	req: Request,
 	res: Response,

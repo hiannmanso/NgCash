@@ -9,7 +9,7 @@ datasource db {
 
 model accounts {
   id                                                    Int            @id(map: "accounts_pk") @default(autoincrement())
-  balance                                               Int
+  balance                                               Int            @default(100)
   transactions_accountsTotransactions_debitedAccountId  transactions[] @relation("accountsTotransactions_debitedAccountId")
   transactions_accountsTotransactions_creditedAccountId transactions[] @relation("accountsTotransactions_creditedAccountId")
   users                                                 users[]
