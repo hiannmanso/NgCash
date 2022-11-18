@@ -23,7 +23,7 @@ export async function newTransaction(
 			message: 'You do not have enough balance.',
 		}
 	}
-	if (infoUser.users[username] === username) {
+	if (infoUser.users.username === username) {
 		throw {
 			status: 400,
 			message: `You cannot make a transfer to yourself.`,
@@ -36,15 +36,13 @@ export async function newTransaction(
 			message: `This user does not exist.`,
 		}
 	}
-	const date = new Date()
-	const dateNow = date.valueOf()
+	console.log(infoUser.users[username], username)
 	const result = await balanceRepository.updateAccount(
 		isUsernameValid.accountId,
 		isUsernameValid.accounts.balance + value,
 		infoUser.id,
 		infoUser.balance - value,
-		value,
-		dateNow
+		value
 	)
 	return result
 }

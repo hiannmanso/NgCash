@@ -9,7 +9,7 @@ export async function signUp(username: string, password: string) {
 	if (isInvalidUsername) {
 		throw {
 			status: 401,
-			message: `This email is already in use.`,
+			message: `This username is already in use.`,
 		}
 	}
 
@@ -22,13 +22,13 @@ export async function signIn(username: string, password: string) {
 	if (!isValidAccount) {
 		throw {
 			status: 401,
-			message: `Email invalid.`,
+			message: `username invalid.`,
 		}
 	}
 	if (!bcrypt.compareSync(password, isValidAccount.password)) {
 		throw {
 			status: 401,
-			message: `Incorrect password or email.`,
+			message: `Incorrect password or username.`,
 		}
 	}
 	const token = generateToken(isValidAccount.accountId)

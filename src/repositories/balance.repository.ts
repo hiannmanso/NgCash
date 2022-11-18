@@ -17,8 +17,7 @@ async function updateAccount(
 	BalanceCashIn: number,
 	AccountIDCashOut: number,
 	BalanceCashOut: number,
-	Value: number,
-	dateNow: number
+	Value: number
 ) {
 	const result = await prisma.$transaction([
 		prisma.accounts.update({
@@ -32,8 +31,8 @@ async function updateAccount(
 		prisma.transactions.create({
 			data: {
 				value: Value,
-				debitedAccountId: AccountIDCashIn,
-				creditedAccountId: AccountIDCashOut,
+				debitedAccountId: AccountIDCashOut,
+				creditedAccountId: AccountIDCashIn,
 			},
 		}),
 	])
