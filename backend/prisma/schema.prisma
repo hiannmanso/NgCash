@@ -21,7 +21,7 @@ model transactions {
   creditedAccountId                                 Int
   value                                             Int
   createdAt                                         DateTime @default(now())
-  accounts_accountsTotransactions_debitedAccountId  accounts @relation("accountsTotransactions_debitedAccountId", fields: [debitedAccountId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "transactions_fk0")
+  accounts_accountsTotransactions_debitedAccountId  accounts @relation("accountsTotransactions_debitedAccountId", fields: [debitedAccountId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "transactions_fk0") 
   accounts_accountsTotransactions_creditedAccountId accounts @relation("accountsTotransactions_creditedAccountId", fields: [creditedAccountId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "transactions_fk1")
 }
 
