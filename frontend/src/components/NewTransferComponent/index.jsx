@@ -35,8 +35,9 @@ export default function NewTransferComponent() {
 				setDisplayModal('none')
 				setLoadTransactions(!loadTransactions)
 			})
-			.catch((err) => {
-				console.log(err)
+			.catch((error) => {
+				console.log(error)
+				alert(error.response.data)
 			})
 	}
 	return (
