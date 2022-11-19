@@ -150,7 +150,8 @@ export const Home = styled.div`
 		}
 	}
 	.total {
-		position: absolute;
+		position: relative;
+
 		bottom: 10px;
 		left: 10px;
 		right: 10px;
@@ -163,8 +164,6 @@ export const Home = styled.div`
 			font-weight: 700;
 			font-size: 17px;
 			line-height: 20px;
-			/* identical to box height */
-
 			color: #000000;
 		}
 	}

@@ -5,25 +5,35 @@ import axios from 'axios'
 export default function NewTransferComponent() {
 	const [username, setUsername] = useState('')
 	const [value, setValue] = useState('')
-	const { displayModal, setDisplayModal } = useContext(UserContext)
+
+	const {
+		displayModal,
+		setDisplayModal,
+		setLoadTransactions,
+		loadTransactions,
+	} = useContext(UserContext)
+	const token = localStorage.getItem('token')
 
 	function newTransaction(e) {
 		e.preventDefault()
+		console.log(token)
+		console.log
+
 		axios({
-			method: 'get',
-			url: `${import.meta.env.VITE_API_URL}/transactions/cash-in`,
+			method: 'post',
+			url: `${import.meta.env.VITE_API_URL}/cash-in`,
 			data: {
 				username,
-				value,
+				value: parseFloat(value),
 			},
 			headers: {
-				authorization: `Bearer ${token}`,
+				Authorization: `Bearer ${token}`,
 			},
 		})
 			.then((response) => {
 				console.log(response.data)
-				setUserTransaction(response.data)
 				setDisplayModal('none')
+				setLoadTransactions(!loadTransactions)
 			})
 			.catch((err) => {
 				console.log(err)
@@ -38,7 +48,7 @@ export default function NewTransferComponent() {
 				}}
 			></div>
 			<div className='modal'>
-				<form action={newTransaction} className='formModal'>
+				<form onSubmit={newTransaction} className='formModal'>
 					<h1> Nova Transferência</h1>
 					<input
 						type='text'

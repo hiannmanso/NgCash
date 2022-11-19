@@ -10,17 +10,22 @@ import NewTransferComponent from '../../components/NewTransferComponent/index.js
 
 export default function Home() {
 	const navigation = useNavigate()
-	const [loadTransactions, setLoadTransactions] = useState(false)
+
 	const [userInfos, setUserInfos] = useState()
 	const [total, setTotal] = useState(0)
 	const [userTransaction, setUserTransaction] = useState()
 	const token = localStorage.getItem('token')
-	const { setDisplayModal, displayModal } = useContext(UserContext)
+	const {
+		setDisplayModal,
+		displayModal,
+		loadTransactions,
+		setLoadTransactions,
+	} = useContext(UserContext)
 	useEffect(() => {
 		console.log({ token })
 		axios({
 			method: 'get',
-			url: 'http://localhost:5000/balance',
+			url: `${import.meta.env.VITE_API_URL}/balance`,
 			headers: {
 				authorization: `Bearer ${token}`,
 			},
@@ -37,7 +42,7 @@ export default function Home() {
 	}, [])
 	useEffect(() => {
 		getMyTransfers()
-	}, [])
+	}, [loadTransactions])
 	function getMyTransfers() {
 		axios({
 			method: 'get',

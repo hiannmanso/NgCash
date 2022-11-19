@@ -48,7 +48,7 @@ export default function SignIpComponent() {
 					onChange={(e) => setPassword(e.target.value)}
 				/>
 
-				<input className='submit' type='submit' value='Criar Conta' />
+				<input className='submit' type='submit' value='Entrar' />
 			</form>
 			<Link to='/sign-up'>Não possui conta? Crie aqui!</Link>
 		</s.SignUpContainer>
