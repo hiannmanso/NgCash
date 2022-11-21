@@ -35,7 +35,11 @@ https://github.com/hiannmanso/NgCash
 ```
 enter the frontend or backend folder
 ```git
-cd frontend or cd backend
+cd frontend 
+```
+or
+```git
+cd backend
 ```
 
 Then, navigate to the project folder and run the following command:
