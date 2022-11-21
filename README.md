@@ -35,7 +35,6 @@
 
 # Getting Started
 
-This Api can be used in two different ways: by cloning the project or by using your preferred client, such as [Insomnia](https://insomnia.rest/) or [Postman](https://www.getpostman.com/).
 
 To clone the project, run the following command:
 
@@ -56,6 +55,11 @@ npm install
 Finally, start the server:
 
 ```git
-npm start
+npm run dev
+```
+
+to run tests use command:
+```git
+npm test
 ```
 
