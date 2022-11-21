@@ -6,6 +6,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "nodemon src/server.ts",
+		"docker:run": "docker-compose -f docker-compose.yml --env-file .env up",
 		"test": "dotenv -e .env.test prisma migrate reset && dotenv -e .env.test cross-env jest --runInBandjest --detectOpenHandles -i"
 	},
 	"keywords": [],
