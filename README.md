@@ -33,3 +33,25 @@
   - [Balance](#payments)
   - [Transactions](#recharges)
 
+# Getting Started
+
+This Api can be used in two different ways: by cloning the project or by using your preferred client, such as [Insomnia](https://insomnia.rest/) or [Postman](https://www.getpostman.com/).
+
+To clone the project, run the following command:
+
+```git
+git clone https://github.com/NivaldoFarias/valex-api.git
+```
+
+Then, navigate to the project folder and run the following command:
+
+```git
+npm install
+```
+
+Finally, start the server:
+
+```git
+npm start
+```
+
