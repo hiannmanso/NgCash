@@ -1,13 +1,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/NivaldoFarias/valex-api">
-    <img src="./.github/valex-logo.png" alt="Logo" width="110">
+    <img src="https://ng.cash/_nuxt/img/logo-ngcash-branco.88c5860.svg" alt="Logo" width="110">
   </a>
 
 <h3 align="center">NgCash</h3>
   <h6>WIP</h6>
   <p>
-    Back end Development Project <strong>{18ᵗʰ}</strong>
+ <strong>Full Stack Project</strong>
     <br />
     <a href="https://github.com/hiannmanso/NgCash"><strong>Browse TypeScript code»</strong></a>
 </div>
