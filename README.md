@@ -9,7 +9,8 @@
   <p>
  <strong>Full Stack Project</strong>
     <br />
-    <a href="https://github.com/hiannmanso/NgCash"><strong>Browse TypeScript code»</strong></a>
+    <a href="https://github.com/hiannmanso/NgCash/tree/main/frontend"><strong>Browse JSX code»</strong></a>
+    <a href="https://github.com/hiannmanso/NgCash/tree/main/backend"><strong>Browse TypeScript code»</strong></a>
 </div>
 
 <div align="center">
