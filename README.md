@@ -40,7 +40,11 @@ This Api can be used in two different ways: by cloning the project or by using y
 To clone the project, run the following command:
 
 ```git
-git clone https://github.com/NivaldoFarias/valex-api.git
+https://github.com/hiannmanso/NgCash
+```
+enter the frontend or backend folder
+```git
+cd frontend or cd backend
 ```
 
 Then, navigate to the project folder and run the following command:
