@@ -23,3 +23,13 @@
   <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" height="30px"/>
   <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" height="30px"/>
 </div>
+
+# Table of Contents
+
+- [Getting Started](#getting-started)
+- [API Reference](#api-reference)
+  - [Routes](#routes)
+  - [Auth](#cards)
+  - [Balance](#payments)
+  - [Transactions](#recharges)
+
