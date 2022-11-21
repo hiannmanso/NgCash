@@ -5,7 +5,7 @@
   </a>
 
 <h3 align="center">NgCash</h3>
-  <h6>WIP</h6>
+
   <p>
  <strong>Full Stack Project</strong>
     <br />
