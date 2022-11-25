@@ -1,6 +1,6 @@
 <br />
 <div align="center">
-  <a href="https://github.com/NivaldoFarias/valex-api">
+  <a href="">
     <img src="https://ng.cash/_nuxt/img/logo-ngcash-branco.88c5860.svg" alt="Logo" width="110">
   </a>
 
